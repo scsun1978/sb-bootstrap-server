@@ -20,3 +20,15 @@ export $(sed -e 's/#.*//g' -e 's/ //g' templates/example.env) \
 	•	eval "$(sb env-proxy)"
 
 ⸻
+
+MODE=tun \
+SERVER= \
+PORT= \
+UUID= \
+SNI=apple.com \
+PBK= \
+SID= \
+FP=chrome \
+FLOW=xtls-rprx-vision \
+DIRECT_CIDRS="" \
+curl -fsSL https://raw.githubusercontent.com/scsun1978/sb-bootstrap-server/main/bootstrap-sb.sh | bash
