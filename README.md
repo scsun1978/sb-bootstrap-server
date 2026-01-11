@@ -7,7 +7,8 @@
 	•	自动开启 IPv4 转发（TUN 需要）
 	•	最后自动做一次出口测试
 
-curl -fsSL https://your.domain/bootstrap-sb.sh | bash
+export $(sed -e 's/#.*//g' -e 's/ //g' templates/example.env) \
+&& curl -fsSL https://raw.githubusercontent.com/scsun1978/sb-bootstrap-server/main/bootstrap-sb.sh | bash
 
 初始化完成后你怎么管理
 	•	查看状态：sb status
